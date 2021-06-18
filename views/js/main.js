@@ -15,7 +15,7 @@ const getInfo=async ()=>{
 
     if(inval==""){
         imgCorana.innerHTML=``;
-        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter Country</h1>`
+        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter State...</h1>`
         // info.innerHTML=``
         // console.log(1);
     }else{

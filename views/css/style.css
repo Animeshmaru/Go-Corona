@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .title{
     display: flex;
     align-items: center;
@@ -27,6 +29,7 @@ body {
     margin: 0;
     padding: 0;
     /* background: #7C3238; */
+    font-family: 'Lobster', cursive;
 }
 
 /* search css */
@@ -114,7 +117,7 @@ body {
   margin-top: 12rem;
   width: 20rem;
   font-weight: 900;
-  font-family: cursive;
+  /* font-family: cursive; */
 }
 .country-info .container:hover{
   box-shadow: 0 40px 60px -20px rgba(12, 5, 62, 0.45);
@@ -153,7 +156,7 @@ body {
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
-    font-family: cursive;
+    /* font-family: cursive; */
     color: black;
   }
   .card-header{
@@ -170,6 +173,7 @@ body {
     height: 30rem;
   }
   .card-text-vaccine{
+    font-family: 'Acme', sans-serif;
     font-weight: 600;
     margin-left: 3rem;
     
