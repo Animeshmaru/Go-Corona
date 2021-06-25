@@ -42,7 +42,7 @@ const getInfo=async ()=>{
     }else{
         // kidding.innerHTML=``;
         try {
-            info.innerHTML=``
+            // info.innerHTML=``
             let url=fetch(`https://api.rootnet.in/covid19-in/hospitals/beds`);
             const response=await url
             let objData= await response.json();
