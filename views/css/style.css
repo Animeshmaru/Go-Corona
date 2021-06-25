@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .title{
     display: flex;
     align-items: center;
@@ -17,8 +17,12 @@
   position: absolute;
   right: 1rem;
 }
-
-
+.navbar-dark .navbar-brand{
+  color: aqua;
+}
+.navbar-dark .navbar-brand:hover{
+  color: #FF851B;
+}
 
 .data-hide{
   visibility: hidden;
@@ -29,8 +33,9 @@ body {
     margin: 0;
     padding: 0;
     /* background: #7C3238; */
-    font-family: 'Lobster', cursive;
-}
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'Roboto', sans-serif;
+  }
 
 /* search css */
 .search-box {
@@ -96,7 +101,8 @@ body {
     object-fit: cover;
   }
 .info{
-  /* margin-top: 14rem; */
+  height: 100vh;
+    width: 100%;
 }
 .kidding .title{
   font-size: 2rem;
@@ -308,6 +314,10 @@ body {
 }
 .foot-container a{
   text-decoration: none;
+  color: rgba(255,255,255,.5);
+}
+.foot-container a:hover{
+  color: white;
 }
 .foot-container{
    display: flex;
@@ -326,7 +336,24 @@ body {
 }
 .footer .links a{
   margin: 0.8rem;
+  color: white;
 }
+.footer .links a:nth-child(1):hover{
+  color:#4267B2;
+}
+.footer .links a:nth-child(2):hover{
+  color:#bc2a8d;
+}
+.footer .links a:nth-child(3):hover{
+  color:#0077b5;
+}
+.footer .links a:nth-child(4):hover{
+  color:#1DA1F2;
+}
+.footer .links a:nth-child(5):hover{
+  color: #4078c0 ;
+}
+
 
 
 /* 404 error page */

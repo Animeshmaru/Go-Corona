@@ -21,7 +21,7 @@ const getIndInfo=async ()=>{
   const response=await url
   let objData= await response.json();
   let arrData=[objData];
-  console.log(arrData);
+  // console.log(arrData);
 
   stateInfo.innerHTML=`${arrData[0].data.regional[36].state}`
   totHosp.innerHTML=`${arrData[0].data.regional[36].totalHospitals}`
@@ -37,17 +37,17 @@ getIndInfo();
 const getInfo=async ()=>{
     const inval=document.querySelector('.search-text').value;
     if(inval==""){
-        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter state</h1>`
-        info.innerHTML=``
+        // kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter state</h1>`
+        // info.innerHTML=``
     }else{
-        kidding.innerHTML=``;
+        // kidding.innerHTML=``;
         try {
-          // info.innerHTML=``
+            info.innerHTML=``
             let url=fetch(`https://api.rootnet.in/covid19-in/hospitals/beds`);
             const response=await url
             let objData= await response.json();
             let arrData=[objData];
-            console.log(arrData);
+            // console.log(arrData);
             
             let code;
             if(inval=="Andhra Pradesh"||inval=="andhra pradesh")code=0;
@@ -98,7 +98,8 @@ const getInfo=async ()=>{
 
            
         } catch (error) {
-
+          // imgCorana.innerHTML=``;
+          info.innerHTML=`<div style=" display:flex; height:100vh; width:100%;align-items: center; justify-content:center; text-align:center " >ENTER VALID STATE<div>`
         }    
     }
 }

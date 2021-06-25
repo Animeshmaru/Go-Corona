@@ -13,15 +13,15 @@ const getInfo=async ()=>{
     // console.log(inval.value);
 
     if(inval==""){
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter Country</h1>`
+        // imgCorana.innerHTML=``;
+        // kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter Country</h1>`
         // info.innerHTML=``
         // console.log(1);
     }else{
         // console.log(2);
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=``;
+        // kidding.innerHTML=``;
         try {
+            imgCorana.innerHTML=``;
             let url=`https://corona.lmao.ninja/v2/countries/${inval}?yesterday&strict&query%20`
             const response=await fetch(url);
             let objData= await response.json();
@@ -91,8 +91,8 @@ const getInfo=async ()=>{
          </div>
         `
         } catch (error) {
-          info.innerHTML=`ENTER VALID COUNTRY`
-          console.log("err");
+          imgCorana.innerHTML=``;
+          info.innerHTML=`<div style=" display:flex; height:100vh; width:100%;align-items: center; justify-content:center; text-align:center " >ENTER VALID COUNTRY<div>`
         }    
     }
 }

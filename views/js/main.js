@@ -14,15 +14,15 @@ const getInfo=async ()=>{
     // console.log(inval.value);
 
     if(inval==""){
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter State...</h1>`
+        // imgCorana.innerHTML=``;
+        // kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter State...</h1>`
         // info.innerHTML=``
         // console.log(1);
     }else{
         // console.log(2);
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=``;
+        // kidding.innerHTML=``;
         try {
+            imgCorana.innerHTML=``;
             let url=fetch(`https://api.rootnet.in/covid19-in/stats/latest`);
             
             const response=await url
@@ -104,6 +104,8 @@ const getInfo=async ()=>{
 
         `
         } catch (error) {
+          imgCorana.innerHTML=``;
+          info.innerHTML=`<div style=" display:flex; height:100vh; width:100%;align-items: center; justify-content:center; text-align:center " >ENTER VALID STATE<div>`
 
         }    
     }

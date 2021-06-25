@@ -17,21 +17,21 @@ const getInfo=async ()=>{
     const inval=document.querySelector('.search-text').value;
     // console.log(inval.value);
     if(inval==""){
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter PINCODE</h1>`
+        // imgCorana.innerHTML=``;
+        // kidding.innerHTML=`<h1 class="title">Are U Kidding, Pls Enter PINCODE</h1>`
         // info.innerHTML=``
         // console.log(1);
     }else{
         // console.log(2);
-        imgCorana.innerHTML=``;
-        kidding.innerHTML=``;
+        // kidding.innerHTML=``;
         try {
+            imgCorana.innerHTML=``;
             let url=fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${inval}&date=${curdate}`);
             
             const response=await url
             let objData= await response.json();
             let arrData=[objData];
-            console.log(arrData);
+            // console.log(arrData);
             
           info.innerHTML+=`
           <div class="country-info">
@@ -68,10 +68,8 @@ const getInfo=async ()=>{
 
 
         } catch (error) {
-
-          info.innerHTML=`
-            ${arrData[0].error}
-          `
+          imgCorana.innerHTML=``;
+          info.innerHTML=`<div style=" display:flex; height:100vh; width:100%;align-items: center; justify-content:center; text-align:center " >ENTER VALID PINCODE<div>`
         }    
     }
 }
